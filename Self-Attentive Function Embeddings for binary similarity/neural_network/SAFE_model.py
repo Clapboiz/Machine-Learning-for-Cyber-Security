@@ -86,26 +86,17 @@ class modelSAFE:
     def train(self):
         g = tf.Graph()
         with g.as_default():
-            # Cấu hình phiên (session)
             session_conf = tf.compat.v1.ConfigProto(
                 allow_soft_placement=True,
                 log_device_placement=False
             )
-            
-            # Trong TensorFlow 2.x, sử dụng tf.compat.v1.Session để tương thích với code TensorFlow 1.x
             sess = tf.compat.v1.Session(graph=g, config=session_conf)
-            
-            # TODO: Initialize or build your network here. This is a placeholder step.
-            # You need to replace this with your actual model initialization or setup.
-            # For example:
-            # self.network = MyModel(...)
-            # Ensure that 'self.network' has an attribute 'loss' that you can reference later.
 
-            # Đừng quên khởi tạo các biến trước khi sử dụng
+            self.create_network()  # Khởi tạo mạng trước khi sử dụng
+
             sess.run(tf.compat.v1.global_variables_initializer())
 
             # TensorBoard
-            # Summaries for loss and accuracy
             loss_summary = tf.summary.scalar("loss", self.network.loss)
 
             # Train Summaries

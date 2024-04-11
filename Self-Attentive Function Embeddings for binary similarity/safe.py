@@ -3,27 +3,27 @@
 import os
 import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'asm_embedding.FunctionAnalyzerRadare'))
-import RadareFunctionAnalyzer # type: ignore
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'asm_embedding.FunctionAnalyzerRadare'))
+# import RadareFunctionAnalyzer # type: ignore
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'asm_embedding.FunctionNormalizer'))
-import FunctionNormalizer # type: ignore
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'asm_embedding.FunctionNormalizer'))
+# import FunctionNormalizer # type: ignore
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'asm_embedding.InstructionsConverter'))
-import InstructionsConverter # type: ignore
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'asm_embedding.InstructionsConverter'))
+# import InstructionsConverter # type: ignore
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'neural_network.SAFEEmbedder'))
-import SAFEEmbedder # type: ignore
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'neural_network.SAFEEmbedder'))
+# import SAFEEmbedder # type: ignore
 
-sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
-import utils # type: ignore
+# sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
+# import utils # type: ignore
 
-# from asm_embedding.FunctionAnalyzerRadare import RadareFunctionAnalyzer
+from asm_embedding.FunctionAnalyzerRadare import RadareFunctionAnalyzer
 from argparse import ArgumentParser
-# from asm_embedding.FunctionNormalizer import FunctionNormalizer
-# from asm_embedding.InstructionsConverter import InstructionsConverter
-# from neural_network.SAFEEmbedder import SAFEEmbedder
-# from utils import utils
+from asm_embedding.FunctionNormalizer import FunctionNormalizer
+from asm_embedding.InstructionsConverter import InstructionsConverter
+from neural_network.SAFEEmbedder import SAFEEmbedder
+from utils import utils
 
 class SAFE:
 
